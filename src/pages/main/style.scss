@@ -40,31 +40,11 @@
     display: flex;
   }
 
-  &_slide {
+  &__slide {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
-    background-image: url(/static/images/slider-img.png);
-  }
-
-  &:nth-child(1) {
-    background-image: url(/static/images/slider-img.png);
-  }
-
-  // не понимаю почему проблема с :nth-child(2),
-  // если я убираю его из коментов то на странице весь слайдер ломается((
-
-  // &:nth-child(2) {
-  //   background-image: url(/static/images/slider-img.png);
-  // }
-
-  &:nth-child(3) {
-    background-image: url(/static/images/slider-img.png);
-  }
-
-  &:nth-child(4) {
-    background-image: url(/static/images/slider-img.png);
   }
 
   &__bottom-panel {
@@ -85,21 +65,27 @@
     background: transparent;
   }
 
+  &__pagination {
+    cursor: pointer;
+    display: flex;
+  }
+
   &__dot {
     cursor: pointer;
     width: 10px;
     height: 10px;
-    opacity: 0;
+    background-color: #E5E5E5;
+    margin-right: 10px;
   }
 
   &__dot:hover {
     cursor: pointer;
-    background: #E5E5E5;
+    background-color: #E5E5E5;
   }
 
   &__dot:active {
     cursor: pointer;
-    background: #070707;
+    background-color: #070707;
     }
 }
 .content {

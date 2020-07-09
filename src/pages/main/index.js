@@ -15,28 +15,72 @@
 const wrapper = document.querySelector(".slider__wrapper");
 const innerWrapper = document.querySelector(".slider__inner-wrapper");
 const pagination = document.querySelector(".slider__pagination");
-const buttonNext = document.querySelector(".slider__button-next");
-const buttonBack = document.querySelector(".slider__button-back");
-const slides = document.querySelectorAll(".slider_slide");
-
+const buttonNext = document.querySelector(".slider__button-left");
+const buttonBack = document.querySelector(".slider__button-right");
+const slides = document.querySelectorAll(".slider__slide");
+innerWrapper.style.transition = "margin-left .5s";
 let shearWidth = +getComputedStyle(wrapper).width.split("px")[0];
-let numberSlides = innerWrapper.querySelectorAll(".slider_slide").length - 1;
+let numberSlides = innerWrapper.querySelectorAll(".slider__slide").length - 1;
 
 let activeSlide = 0;
+let dot = []; 
 
-function init() {
+function initWidthSlides() {
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.width = shearWidth + "px";
+  }
+}
+
+initWidthSlides(); 
+
+function init() {
+  for(let i = 0; i < slides.length; i++) {
+    let dot = document.createElement("button");
+    dot.classList.add("slider__dot");
+    if(i === activeSlide) {
+      dot.classList.add("slider__dot_active");
+    }
+      dot.addEventListener("click", function () {
+        setActiveSlide(i);
+      })
+    // dots[dots.length] = dot;
+    dots.push(dot);
+    pagination.insertAdjacentElement("beforeend", dot);
   }
 }
 
 init();
 
 function setActiveSlide(index) {
+  if(index < 0 || index > numberSlides) {
+    return;
+  }
+  dots[activeSlide].classList.remove(slider__dot_active);
+  dots[index].classList.add(slider__dot_active);
+  if(activeSlide - index > 0) {
+    buttonNext.removeAttribute("disabled")
+  }
+  if(activeSlide - index < 0) {
+    buttonBack.removeAttribute("disabled")
+  }
+
+  if(index === 0) {
+    buttonBack.setAttribute("disabled, disabled");
+  }
+  if(index === numberSlides) {
+    buttonNext.setAttribute("disabled, disabled");
+  }
   innerWrapper.style.marginLeft = "-" + shearWidth + "px";
+  activeSlide = index;
 }
 
-setActiveSlide();
+buttonNext.addEventListener("click", function () {
+  setActiveSlide(activeSlide + 1);
+})
+
+buttonBack.addEventListener("click", function () {
+  setActiveSlide(activeSlide - 1);
+}) 
 
 
 
