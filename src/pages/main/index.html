@@ -1,0 +1,89 @@
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="/static/fonts/gilroy.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+    <link href="/common.css" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet"/>    
+    <title>Start page</title>
+  </head>
+  <body>
+    
+    @@include('header/index.html')
+    
+    <main class="main">
+      <div class="container">
+        <div class="main__info">
+          <h1 class="main__title">Antonina Antoninovna</h1>
+          <p class="main__text">Future front-end developer 23 years old, Tolyatti</p>
+        </div>
+      </div>
+        <section class="slider container">
+          <h2 class="hidden">Slider</h2>
+            <div class="slider__wrapper">
+              <div class="slider__inner-wrapper">
+                <div class="slider_slide">
+                  <img class="slide" width="1000" height="465" src="/static/images/slider-img.png" alt="slider">
+                </div>
+                <div class="slider_slide hidden">
+                  <img class="slide" width="1000" height="465" src="/static/images/slider-img.png" alt="slider">
+                </div>
+                <div class="slider_slide hidden">
+                  <img class="slide" width="1000" height="465" src="/static/images/slider-img.png" alt="slider">
+                </div>
+                <div class="slider_slide hidden">
+                  <img class="slide" width="1000" height="465" src="/static/images/slider-img.png" alt="slider">
+                </div>
+              </div>
+              <div class="slider__bottom-panel">
+                <button class="slider__button slide__button-left" type="button">
+                  <img src="/static/images/arrow-slide.svg" alt="left">
+                </button>
+                <div class="slider__paginations"></div>
+                <button class="slider__button slide__button-right">
+                  <img src="/static/images/arrow-slide2.svg" alt="right">
+                </button>
+              </div>
+            </div>
+        </section>
+        
+        <section class="content container">
+          <h2 class="about-me">About me</h2>
+            <div class="about-me__frame">
+              <p class="about-me__text">Aliquam tortor molestie turpis est tristique. Congue diam orci amet quis semper ut. Vitae aenean nibh facilisis urna, ultricies euismod nunc. Commodo fringilla sit hendrerit consequat. Vel ac elit vel sagittis.</p>
+            </div>
+            <div class="about-me__frame">
+              <p class="about-me__text">Tincidunt id quis pellentesque rutrum pretium. Egestas aliquam dictum ipsum nisl, sed pulvinar. Commodo elit sed a fermentum non justo. Etiam platea consectetur.</p>
+            </div>
+            <div class="about-me__frame">
+              <p class="about-me__text">Quam ipsum odio tellus etiam aliquam dolor ut hendrerit. Felis risus nec vitae nunc ultricies placerat. Nullam nec felis eu id dolor pellentesque tristique. </p>
+            </div>
+        </section>
+        <article class="skills container">
+          <h2 class="skills__title">Skills</h2>
+          <p class="skills__text">I work in such programs as</p>
+          <ul class="skills__icon-list list-hidden-marker">
+            <li class="icon-item"><img class="icon-img" src="/static/images/html.jpg" alt="html5"></li>
+            <li class="icon-item"><img class="icon-img" src="/static/images/css.jpg" alt="CSS/SCSS"></li>
+            <li class="icon-item"><img class="icon-img" src="/static/images/js.jpg" alt="JavaScript"></li>
+            <li class="icon-item"><img class="icon-img" src="/static/images/git.jpg" alt="Git/GitHub"></li>
+            <li class="icon-item"><img class="icon-img" src="/static/images/figma.jpg" alt="Figma"></li>
+          </ul>
+        </article>
+        <section class="portfolio container">
+          <h2 class="portfolio__title">Portfolio</h2>
+          <img class="portfolio__img" src="/static/images/slider-picture.png" alt="picture">
+          <img class="portfolio__fon" src="/static/images/fon.png" alt="fon">
+          <div class="portfolio__img-text">
+            <p class="portfolio__text-dotted"><span class="portfolio__line">Learning site for DL Academy courses</span></p>
+            <p class="portfolio__text">A simple multi-page static site. The design layout was in Figma. HTML and CSS were used. The site is responsive and cross-browser, but without adding interactivity via JavaScript.</p>
+          </div>
+        </section>
+    </main>
+    @@include('footer/index.html')
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

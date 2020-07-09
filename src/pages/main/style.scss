@@ -1,0 +1,229 @@
+
+.main {
+
+  &__info {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__title {
+    font-family: 'Gilroy', 'sans-serif';
+    font-weight: bold;
+    max-width: 280px;
+    margin-top: 0;
+    margin-bottom: 36px;
+    margin-right: 40px;
+    font-size: 47px;
+    line-height: 57px;
+    color: #070707;
+  }
+
+  &__text {
+    font-family: 'Gilroy', 'sans-serif';
+    font-weight: bold;
+    max-width: 226px;
+    margin-top: 0;
+    margin-bottom: 44px;
+    font-size: 18px;
+    line-height: 21px;
+    color: #070707;
+  }
+}
+
+.slider {
+
+  &__wrapper {
+    overflow: hidden;
+  }
+
+  &__inner-wrapper {
+    display: flex;
+  }
+
+  &_slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background-image: url(/static/images/slider-img.png);
+  }
+
+  &:nth-child(1) {
+    background-image: url(/static/images/slider-img.png);
+  }
+
+  // не понимаю почему проблема с :nth-child(2),
+  // если я убираю его из коментов то на странице весь слайдер ломается((
+
+  // &:nth-child(2) {
+  //   background-image: url(/static/images/slider-img.png);
+  // }
+
+  &:nth-child(3) {
+    background-image: url(/static/images/slider-img.png);
+  }
+
+  &:nth-child(4) {
+    background-image: url(/static/images/slider-img.png);
+  }
+
+  &__bottom-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 60px;  
+  }
+
+  &__button {
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+  }
+
+  &__dot {
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    opacity: 0;
+  }
+
+  &__dot:hover {
+    cursor: pointer;
+    background: #E5E5E5;
+  }
+
+  &__dot:active {
+    cursor: pointer;
+    background: #070707;
+    }
+}
+.content {
+
+  background: #F6F6F6;
+  padding: 60px 431px 62px 431px;
+
+  .about-me {
+  
+    font-family: 'Gilroy', 'sans-serif';
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 41px;
+    text-align: center;
+    color: #070707;
+  
+    &__frame {
+  
+      width: 478px;
+      height: 114px;
+      border-style: solid;
+      border-color: #070707;
+      border-width: 2,5px;
+      margin-bottom: 20px;
+    }
+  
+    &__text {
+  
+    font-family: 'Gilroy', 'sans-serif';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    padding: 15px;
+    margin: 0;
+    color: #070707;
+    }
+  }
+}
+
+.skills {
+
+  &__title {
+
+    font-family: 'Gilroy', 'sans-serif';
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 41px;
+    text-align: center;
+    color: #070707;
+  }
+
+  &__text {
+
+    font-family: 'Gilroy', 'sans-serif';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #070707;
+  }
+
+  &__icon-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0 64px 0;
+  }
+}
+
+.portfolio {
+
+  background: #F6F6F6;
+  padding: 60px 220px 60px 220px;
+
+  &__title {
+
+    font-family: 'Gilroy', 'sans-serif';
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 41px;
+    text-align: center;
+    color: #070707;
+  }
+
+  &__img {
+    position: relative;
+  }
+
+  &__fon {
+    position: absolute;
+    display: flex;
+    
+  }
+
+  &__img-text {
+
+    position: absolute;
+    padding: 31px 300px;
+  }
+
+  &__text-dotted {
+
+    font-family: 'Gilroy', 'sans-serif';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  &__line {
+
+    border-bottom: 1px dashed #FFFFFF;
+  }
+
+  &__text {
+
+    font-family: 'Gilroy', 'sans-serif';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+}
+
+

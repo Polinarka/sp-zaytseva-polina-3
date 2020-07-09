@@ -1,0 +1,57 @@
+.footer {
+
+  font-family: 'Gilroy', 'sans-serif';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__title {
+
+    font-family: 'Gilroy', 'sans-serif';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 41px;
+    text-align: center;
+    padding-top: 60px;
+    color: #070707;
+  }
+
+  &__text {
+
+    font-family: 'Gilroy', 'sans-serif';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    padding-top: 20px;
+    text-align: center;
+    color: #070707;
+  }
+
+  &__info {
+
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &__info-text {
+    
+    font-family: 'Gilroy', 'sans-serif';
+    padding-bottom: 5px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #828282;
+  }
+
+  &__text-line {
+    
+    cursor: pointer;
+    border-bottom: 1px dashed #828282;
+  }
+
+  &__text-line:hover {
+    color: #070707;
+  }
+}

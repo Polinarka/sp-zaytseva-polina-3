@@ -1,0 +1,70 @@
+.header {
+  font-family: 'Gilroy', 'sans-serif';
+  font-weight: bold;
+  padding: 33px 0 32px 0;
+  
+
+  &__content {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    
+    font-family: 'Gilroy', 'sans-serif';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #070707;
+  }
+
+  &__title:hover {
+
+    cursor: pointer;
+    color: #828282;
+  }
+
+  &__menu {
+
+    display: flex;
+  }
+
+  &__menu-item {
+
+    margin: 10px;
+    font-size: 14px;
+    line-height: 19px;
+    color: #828282;
+    box-sizing: content-box;
+  }
+
+  &__menu-item:hover {
+
+    cursor: pointer;
+    color: #070707;
+  }
+
+  &__menu-link {
+
+    display: flex;
+    justify-content: space-between;
+    color: #828282;
+  }
+
+  &__menu-link:hover {
+
+    cursor: pointer;
+  color: #070707;
+  }
+
+  &__line {
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #828282;
+  }
+}
