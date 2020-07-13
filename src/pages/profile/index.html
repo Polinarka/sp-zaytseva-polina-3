@@ -1,0 +1,41 @@
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="/static/fonts/gilroy.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+    <link href="/common.css" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet"/>    
+    <title>My profile</title>
+  </head>
+  <body>
+    
+    @@include('header/index.html')
+
+    <main>
+      <section class="profile container">
+        <h1 class="profile__title">My profile</h1>
+        <div class="profile__group">
+          <img class="profile__img" src="/static/images/foto.png" alt="foto"></img>
+            <ul class="profile__list list-hidden-marker">
+              <li class="profile__item">Name:</li>
+              <li class="profile__item">Surname:</li>
+              <li class="profile__item">Email:</li>
+              <li class="profile__item">Password:</li>
+              <li class="profile__item">Location:</li>
+              <li class="profile__item">Age:</li>
+            </ul>
+            
+      </div>
+      </section>
+    </main>
+
+    <template>
+
+    </template>
+    @@include('footer/index.html')
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

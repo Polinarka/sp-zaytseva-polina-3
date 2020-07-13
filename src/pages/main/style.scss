@@ -31,6 +31,7 @@
 }
 
 .slider {
+  
 
   &__wrapper {
     overflow: hidden;
@@ -58,11 +59,14 @@
   &__button {
     width: 42px;
     height: 42px;
-    padding: 0;
-    text-align: center;
     cursor: pointer;
-    border: none;
     background: transparent;
+    box-sizing: border-box;
+    justify-content: center;
+  }
+
+  &__button:hover {
+    opacity: 0.5;
   }
 
   &__pagination {
@@ -71,23 +75,27 @@
   }
 
   &__dot {
-    cursor: pointer;
     width: 10px;
     height: 10px;
-    background-color: #E5E5E5;
+    border: 0;
+    padding: 0;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    transition: background-color .4s;
     margin-right: 10px;
-  }
 
-  &__dot:hover {
-    cursor: pointer;
-    background-color: #E5E5E5;
-  }
-
-  &__dot:active {
-    cursor: pointer;
-    background-color: #070707;
+    &_active {
+      background-color: #070707;
+    } 
+    
+    &:not(.slider__dot_active):hover,
+    &:not(.slider__dot_active):focus {
+      background-color: #828282;
     }
+  }
 }
+
 .content {
 
   background: #F6F6F6;
@@ -102,31 +110,61 @@
     text-align: center;
     color: #070707;
   
-    &__frame {
-  
-      width: 478px;
-      height: 114px;
-      border-style: solid;
-      border-color: #070707;
-      border-width: 2,5px;
-      margin-bottom: 20px;
-    }
-  
     &__text {
   
-    font-family: 'Gilroy', 'sans-serif';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 21px;
-    padding: 15px;
-    margin: 0;
-    color: #070707;
+      font-family: 'Gilroy', 'sans-serif';
+      max-width: 478px;
+      font-size: 18px;
+      line-height: 21px;
+      padding: 15px;
+      margin: 0;
+      border: 2.5px solid #070707;
+      margin: 30px 0 30px 0;
+      position: relative;
+
+    &:nth-child(even) {
+      margin-right: -100px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        bottom: -15px;
+        right: 30px;
+        transform: rotate(45deg);
+        border-right: 2.5px solid #070707;
+        border-bottom: 2.5px solid #070707;
+        background-color: #F6F6F6;
+      }
+    }
+
+    &:nth-child(odd) {
+      margin-left: 100px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 25px;
+          height: 25px;
+          bottom: -15px;
+          left: 30px;
+          transform: rotate(45deg);
+          border-right: 2.5px solid #070707;
+          border-bottom: 2.5px solid #070707;
+          background-color: #F6F6F6;
+        }
+      }
     }
   }
 }
 
 .skills {
+  
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  
 
   &__title {
 
@@ -149,14 +187,15 @@
   }
 
   &__icon-list {
+    cursor: pointer;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 50px 0 64px 0;
   }
 }
 
 .portfolio {
-
   background: #F6F6F6;
   padding: 60px 220px 60px 220px;
 
@@ -169,46 +208,63 @@
     text-align: center;
     color: #070707;
   }
+}
 
-  &__img {
-    position: relative;
+.swiper-container {
+  width: 1000px;
+  height: 604px;
+}
+
+.swiper-slide {
+  position: relative;
+
+  &__img  {
+    width: 1000px;
+    height: 604px;
   }
 
-  &__fon {
-    position: absolute;
-    display: flex;
-    
-  }
+  &__description {
 
-  &__img-text {
-
-    position: absolute;
     padding: 31px 300px;
+    position: absolute;
+    bottom: 0;
+    background: rgba(7, 7, 7, 0.85);
   }
 
   &__text-dotted {
-
-    font-family: 'Gilroy', 'sans-serif';
     font-weight: 500;
-    font-size: 18px;
-    line-height: 21px;
+    font-size: 14px;
+    line-height: 16px;
     text-align: center;
-    color: #FFFFFF;
+    margin: 0;
   }
-
-  &__line {
-
-    border-bottom: 1px dashed #FFFFFF;
-  }
-
+    
   &__text {
 
     font-family: 'Gilroy', 'sans-serif';
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
+    margin: 16px 0 0 0;
+
     text-align: center;
     color: #FFFFFF;
+    }
+
+  &__line {
+
+    font-family: 'Gilroy', 'sans-serif';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    margin: 0;
+    color: #FFFFFF;
+    border-bottom: 1px dashed #FFFFFF;
+  }
+
+  &__line:hover {
+    color: #828282;
   }
 }
 
