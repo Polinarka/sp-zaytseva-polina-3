@@ -112,3 +112,14 @@ let mySwiper = new Swiper('.swiper-container', {
   //   el: '.swiper-scrollbar',
   // },
 })
+
+(function () {
+  let form = document.querySelector.signin;
+  formSignin.addEventListener("submit", function (event) {
+    event.preventDefault();
+  });
+
+  let formSignin = document.forms.signin;
+  formSignin.addEventListener("submit", function (event) {
+    event.preventDefault();
+})(); 

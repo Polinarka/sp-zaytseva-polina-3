@@ -60,6 +60,19 @@
   color: #070707;
   }
 
+  &__menu-button {
+
+    display: flex;
+    justify-content: space-between;
+    color: #828282;
+  }
+
+  &__menu-button:hover {
+
+    cursor: pointer;
+  color: #070707;
+  }
+
   &__line {
   
     display: flex;
